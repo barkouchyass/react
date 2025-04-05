@@ -1,3 +1,5 @@
+import EditEmployee from "./EditEmployee";
+
 function employee(props) {
     return (
         <>
@@ -11,9 +13,10 @@ function employee(props) {
                         <p className="text-lg font-semibold text-black">{props.name}</p>
                         <p className="font-medium text-gray-500">{props.role}</p>
                     </div>
-                    <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700">
-                        Update
-                    </button>
+
+                        <EditEmployee/>
+
+                    
                 </div>
             </div>
         </>
