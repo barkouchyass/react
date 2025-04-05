@@ -1,10 +1,23 @@
-function Employee(props) {
+function employee(props) {
     return (
         <>
-            <h3>Employee {props.name}</h3>
-            <p>{props.role ? props.role : "No role"}</p> 
+            <div className="m-2 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+                <img
+                    className="object-cover rounded-full h-[100px] w-[100px] block mx-auto sm:mx-0 sm:shrink-0"
+                    src={props.img}
+                />
+                <div className="text-center space-y-2 sm:text-left">
+                    <div className="space-y-0.5">
+                        <p className="text-lg font-semibold text-black">{props.name}</p>
+                        <p className="font-medium text-gray-500">{props.role}</p>
+                    </div>
+                    <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700">
+                        Update
+                    </button>
+                </div>
+            </div>
         </>
-    ) 
+    )
 }
 
-export default Employee; 
+export default employee; 
