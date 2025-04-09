@@ -5,27 +5,31 @@ import { v4 as uuidv4 } from 'uuid';
 import AddEmployee from './components/AddEmployee';
 import Header from './components/Header';
 import Employees from './pages/Employees';
-import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Customers from './pages/Customers';
 import Dictionary from './pages/Dictionary';
 import Definition from './pages/Definition';
 function App() {
- 
+
   return (
-    
-      <BrowserRouter>
+
+    <BrowserRouter>
       <Header>
         <Routes>
-          <Route path='/employees' element={<Employees/>} />
-          <Route path='/dictionary' element={<Dictionary/>}/>
-          <Route path='/definition' element={<Definition/>}/>
-          <Route path='/customers' element={<Customers/>} />
+          <Route path='/employees' element={<Employees />} />
+          <Route path='/dictionary' element={<Dictionary />} />
+          <Route path='/definition' element={<Definition />} />
+          <Route
+            path='/definition/:search'
+            element={<Definition />}
+          />
+          <Route path='/customers' element={<Customers />} />
         </Routes>
-     </Header> 
-     </BrowserRouter>
-  
+      </Header>
+    </BrowserRouter>
 
-)
+
+  )
 }
 
 export default App;
