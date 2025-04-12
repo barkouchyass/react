@@ -13,25 +13,26 @@ export default function Customers() {
     }, []);
     return (
         <>
-            <h1>here are our customers :</h1>
+            <h1>here are our customers :</h1> 
+             <ul>
             {customers ? customers.map((customer) => {
                 return (
-                    <ul>
-                        <li>
+                        <li key={customer.id}>
                             <p>
                                 <Link
                                     to={"/customers/" + customer.id}
                                     id={customer.id}
-                                    key={customer.id}
+                                    
                                 >
                                     {customer.name}
                                 </Link>
                             </p>
                         </li>
-                    </ul>
+                    
 
                 )
             }) : null}
+            </ul>
         </>
     );
 }
